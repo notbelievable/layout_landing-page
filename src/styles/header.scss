@@ -1,0 +1,17 @@
+.header {
+  box-sizing: border-box;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/89ea6b4ddc72503e619393e4a470827f408b9bbd.png);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    line-height: 100%;
+  }
+}

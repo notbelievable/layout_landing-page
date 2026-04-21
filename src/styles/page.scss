@@ -1,0 +1,11 @@
+.page {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18;
+  color: $color-black;
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+  }
+}
