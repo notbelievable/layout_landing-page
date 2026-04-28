@@ -1,57 +1,29 @@
-.aside {
-  box-sizing: border-box;
-  height: 100vh;
-  background-color: rgba(229, 230, 232, 1);
-
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__menu-contacts {
-    display: flex;
-    flex-direction: column;
-    margin-top: 48px;
-    gap: 16px;
-
-    &--phone,
-    &--call {
-      font-size: 16px;
-      line-height: 140%;
-      color: $color-black;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-    }
-
-    &--call {
-      padding-bottom: 4px;
-      border-bottom: 1px solid $color-black;
-      width: fit-content;
-    }
-  }
-
-  &__content {
-    padding-inline: 20px;
-  }
-
-  &__top {
-    margin-bottom: 32px;
-  }
-}
-
-.aside__page {
+.menu {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  padding-block: 24px 40px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: rgba(229, 230, 232, 1);
 
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
+
+  @include paddingInl;
+
+  @include tablet {
+    padding-top: 36px;
+  }
+
 
   &:target {
     opacity: 1;
     pointer-events: all;
   }
 }
+

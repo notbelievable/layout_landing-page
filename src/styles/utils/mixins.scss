@@ -1,0 +1,40 @@
+@mixin tablet() {
+  @media (min-width: 744px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 1260px) {
+    @content;
+  }
+}
+
+@mixin grid-container() {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0  auto;
+
+  @include paddingInl();
+
+  @include tablet {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+
+@mixin paddingInl() {
+  padding-inline: 20px;
+
+  @include tablet {
+    padding-inline: 72px;
+  }
+
+  @include desktop {
+    padding-inline: 120px;
+  }
+}

@@ -1,8 +1,28 @@
-@import 'variables';
-@import 'page';
-@import 'top-bar';
-@import 'header';
-@import 'aside';
+@import './utils/mixins';
 @import 'icon';
+@import 'header';
 @import 'nav';
+@import 'aside';
+@import 'recommended';
+@import 'category';
+
+// * {
+//   border: 1px solid red;
+// }
+.page {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+  scroll-behavior: smooth;
+}
+
+.body-page {
+  margin: 0;
+}
+
+
+
+
+
 

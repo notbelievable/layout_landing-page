@@ -2,16 +2,32 @@
   display: block;
   height: 24px;
   width: 24px;
+  background-position: center;
+  background-size: cover;
 
-  &--phone {
-    background-image: url('../images/Icon-Phone-call.png');
+  @include tablet {
+    height: 32px;
+    width: 32px;
   }
+}
 
-  &--menu {
-    background-image: url('../images/Icon-Burger-menu.png');
-  }
+.icon--phone {
+  background-image: url(../images/Icon-Phone-call.png);
+}
 
-  &--close {
-    background-image: url(../images/Icon-Close.png);
+.icon--menu {
+  background-image: url(../images/Icon-Burger-menu.png);
+}
+
+.icon--close {
+  background-image: url(../images/Icon-Close.png);
+}
+
+.logo--img {
+  height: 16px;
+  display: flex;
+
+  @include tablet {
+    height: 24px;
   }
 }
