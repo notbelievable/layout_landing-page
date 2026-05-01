@@ -1,5 +1,6 @@
-.recommended{
+.recommended {
   @include grid-container;
+
   row-gap: 40px;
 
   @include tablet {
@@ -10,20 +11,18 @@
     column-gap: 24px;
   }
 
-
   &__title {
-    font-size: 32px;
+    @include title-style;
+
     margin-block: 64px 8px;
     grid-column: span 2;
 
     @include tablet {
-      font-size: 40px;
       margin-block: 120px 0;
       grid-column: span 5;
     }
 
     @include desktop {
-      font-size: 48px;
       grid-column: span 12;
     }
   }
@@ -47,9 +46,8 @@
 
     &-title {
       margin: 0;
-      font-family: 'Space Mono', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
+
+      @include style-info;
     }
 
     &-price {
@@ -64,5 +62,7 @@
     display: block;
     object-fit: cover;
     border-radius: 4px;
+
+    @include hover-zoom;
   }
 }

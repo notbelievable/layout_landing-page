@@ -6,12 +6,12 @@
   justify-content: space-between;
   height: 100vh;
 
-  background-image: url(../images/89ea6b4ddc72503e619393e4a470827f408b9bbd.png);
+  background-image: url(../images/header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @include paddingInl;
+  @include padding-inl;
 
   @include tablet {
     padding-block: 36px 65px;
@@ -37,10 +37,12 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 2px;
-    font-style: bold;
+    color: $color-black;
     white-space: nowrap;
-    display: none;
-    opacity: 1;
+    opacity: 0;
+    right: 40px;
+    position: absolute;
+    pointer-events: none;
   }
 
   &__bot {
@@ -75,7 +77,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-
-
-

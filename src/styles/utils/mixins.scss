@@ -10,12 +10,42 @@
   }
 }
 
+@mixin title-style() {
+  font-size: 32px;
+  line-height: 32px;
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @include desktop {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@mixin style-info() {
+  font-family: 'Space Mono', sans-serif;
+  line-height: 140%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin hover-zoom() {
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
 @mixin grid-container() {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0  auto;
+  margin: 0 auto;
 
-  @include paddingInl();
+  @include padding-inl;
 
   @include tablet {
     grid-template-columns: repeat(6, 1fr);
@@ -26,8 +56,7 @@
   }
 }
 
-
-@mixin paddingInl() {
+@mixin padding-inl() {
   padding-inline: 20px;
 
   @include tablet {

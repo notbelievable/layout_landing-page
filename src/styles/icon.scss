@@ -5,6 +5,8 @@
   background-position: center;
   background-size: cover;
 
+  @include hover-zoom;
+
   @include tablet {
     height: 32px;
     width: 32px;
@@ -12,11 +14,21 @@
 }
 
 .icon--phone {
+  display: flex;
+  align-items: center;
   background-image: url(../images/Icon-Phone-call.png);
+
+  &:hover .header__number {
+    opacity: 1;
+  }
 }
 
 .icon--menu {
   background-image: url(../images/Icon-Burger-menu.png);
+
+  &:hover {
+    background-image: url(../images/Icon-Burger-menu-hover.png);
+  }
 }
 
 .icon--close {
@@ -26,6 +38,8 @@
 .logo--img {
   height: 16px;
   display: flex;
+
+  @include hover-zoom;
 
   @include tablet {
     height: 24px;
