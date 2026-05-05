@@ -12,10 +12,10 @@
       rel="stylesheet"
       href="src/styles/main.scss"
     />
-    <script
+    <!-- <script
       src="src/scripts/main.js"
       defer
-    ></script>
+    ></script> -->
     <link rel="icon" href="src/images/image 4.png"
     type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -230,7 +230,7 @@
             <label for="email"></label>
             <input
             class="item-input"
-            type="text"
+            type="email"
             id="Email"
             name="Email"
             placeholder="Email"
@@ -259,8 +259,8 @@
 
           <h4 class="contact-us__name">Email</h4>
           <a class="contact-us__info"
-          href="https://maps.app.goo.gl/niqab6UXJ1xxiGZy6"
-          target="_blank">hello@nothing.com</a>
+          href="mailto:hello@nothing.com"
+          >hello@nothing.com</a>
 
           <h4 class="contact-us__name">Address</h4>
           <a class="contact-us__info"
@@ -274,5 +274,26 @@
       </section>
 
     </footer>
+    <script>
+      const body = document.body;
+      const menu = document.querySelector('#menu');
+      const openBtn = document.querySelector('.icon--menu');
+      const closeBtn = document.querySelector('.icon--close');
+      const menuLinks = document.querySelectorAll('.nav__link');
+
+      openBtn.addEventListener('click', function () {
+        body.classList.add('is-locked');
+      });
+
+      closeBtn.addEventListener('click', function () {
+        body.classList.remove('is-locked');
+      });
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          body.classList.remove('is-locked');
+        });
+      });
+    </script>
   </body>
 </html>
