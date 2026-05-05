@@ -18,8 +18,10 @@
   align-items: center;
   background-image: url(../images/Icon-Phone-call.png);
 
-  &:hover .header__number {
-    opacity: 1;
+  @include desktop {
+    &:hover .header__number {
+      opacity: 1;
+    }
   }
 }
 
